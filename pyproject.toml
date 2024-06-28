@@ -1,0 +1,43 @@
+[project]
+name = "llmtime"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "liweijia-GROUND", email = "weijia.li@groundinc.co.jp" }
+]
+dependencies = [
+    "numpy<2.0.0",
+    "jax[cpu]>=0.4.30",
+    "torch>=2.3.1",
+    "openai>=1.35.3",
+    "tiktoken>=0.7.0",
+    "tqdm>=4.66.4",
+    "matplotlib>=3.9.0",
+    "pandas>=2.2.2",
+    "darts>=0.30.0",
+    "gpytorch>=1.11",
+    "transformers>=4.41.2",
+    "datasets>=2.20.0",
+    "multiprocess>=0.70.16",
+    "sentencepiece>=0.2.0",
+    "accelerate>=0.31.0",
+    "gdown>=5.2.0",
+    "mistralai>=0.4.1",
+    "ipykernel>=6.29.4",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/llmtime"]
